@@ -1,0 +1,16 @@
+nlp_env/
+.env
+env/
+*.pyc
+TextPreprocessing/data/corpora/
+*.zip
+*.pdf
+*.csv
+
+__pycache__/
+.ipynb_checkpoints/
+
+.DS_Store
+Thumbs.db
+
+.vscode/
