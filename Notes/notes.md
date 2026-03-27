@@ -1,6 +1,6 @@
 # Natural Language Processing (NLP)
 
-## Introduction To NLP
+## M1 - Introduction To NLP
 
 ### **Overview and Definition**
 **Natural Language Processing (NLP)** is defined as a field comprised of three disciplines: **Linguistics** (human language), **Computer Science**, and **Artificial Intelligence**. Its primary goal is not only to enable machines to understand natural language but also to communicate and respond in it.
@@ -320,7 +320,7 @@ Not literal --- metaphorical meaning.
 
 
 
-## End to End NLP Pipeline
+## M2 - End to End NLP Pipeline
 
 ### Overview of the NLP Pipeline
 
@@ -641,7 +641,7 @@ Retraining is essential.
 
 ---
 
-## Text Preprocessing
+## M3 - Text Preprocessing
 
 ### Overview
 The goal of preprocessing is to convert **raw, noisy human language** into **clean, consistent, machine-readable text** that improves ML model performance.
@@ -795,7 +795,6 @@ daily     → dai ❌
 ✔ Fast  
 ❌ Not linguistically accurate  
 
----
 
 #### Lemmatization (Accurate, Slower)
 Lemmatization is a linguistic process.
@@ -852,7 +851,7 @@ Modern transformer models (BERT, GPT):
 
 
 
-## Text Representation
+## M4 - Text Representation
 
 ### Overview: Why Text Representation Matters
 Machine Learning models **cannot understand raw text**.  
@@ -963,10 +962,10 @@ Doc2: I hate this movie
 
 #### BoW Representation
 
-| Document | i | love | hate | this | movie |
-|-------|---|------|------|------|------|
-| Doc1 | 1 | 1 | 0 | 1 | 1 |
-| Doc2 | 1 | 0 | 1 | 1 | 1 |
+| Document | i   | love | hate | this | movie |
+| -------- | --- | ---- | ---- | ---- | ----- |
+| Doc1     | 1   | 1    | 0    | 1    | 1     |
+| Doc2     | 1   | 0    | 1    | 1    | 1     |
 
 #### Problem Example
 ```
@@ -1027,7 +1026,7 @@ TF‑IDF assigns **importance**.
 Measures how often a word appears **inside a document**.
 
 ```
-TF(word) = (word count in doc) / (total words in doc)
+TF(word) = (no. of occurance of term t in document d) / (total no. of words present in document d)
 ```
 
 
@@ -1035,7 +1034,7 @@ TF(word) = (word count in doc) / (total words in doc)
 Measures how **rare** a word is across the corpus.
 
 ```
-IDF(word) = log(Total Docs / Docs containing word)
+IDF(word) = log(Total Docs in corpus / no. of document with term t in them)
 ```
 
 #### Example Corpus
@@ -1067,13 +1066,13 @@ Statistical vectors may miss **domain‑specific signals**.
 
 #### Examples
 
-| Feature | Description |
-|------|------------|
+| Feature             | Description                        |
+| ------------------- | ---------------------------------- |
 | Positive word count | Number of positive sentiment words |
-| Negative word count | Number of negative words |
-| Review length | Total words |
-| Exclamation count | Emotion indicator |
-| Uppercase ratio | Aggression / emphasis |
+| Negative word count | Number of negative words           |
+| Review length       | Total words                        |
+| Exclamation count   | Emotion indicator                  |
+| Uppercase ratio     | Aggression / emphasis              |
 
 
 #### Example
@@ -1091,12 +1090,12 @@ uppercase_ratio = high
 ### Summary Table
 
 | Technique | Captures Meaning | Context | Sparsity |
-|--------|----------------|--------|---------|
-| One‑Hot | ❌ | ❌ | 🔥🔥🔥 |
-| BoW | ⚠️ | ❌ | 🔥🔥 |
-| N‑Grams | ⚠️ | ⚠️ | 🔥🔥🔥 |
-| TF‑IDF | ⚠️ | ❌ | 🔥🔥 |
-| Custom | ✅ (partial) | ⚠️ | Depends |
+| --------- | ---------------- | ------- | -------- |
+| One‑Hot   | ❌                | ❌       | 🔥🔥🔥      |
+| BoW       | ⚠️                | ❌       | 🔥🔥       |
+| N‑Grams   | ⚠️                | ⚠️       | 🔥🔥🔥      |
+| TF‑IDF    | ⚠️                | ❌       | 🔥🔥       |
+| Custom    | ✅ (partial)      | ⚠️       | Depends  |
 
 
 ### Final Note
